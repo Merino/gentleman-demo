@@ -1,0 +1,18 @@
+# Ignore Paths #
+bin/*
+develop-eggs/*
+downloads/*
+eggs/*
+include/*
+lib/*
+parts/*
+code/static/**/*
+
+# Ignore Files #
+
+bin/bootstrap.py
+.Python
+.installed.cfg
+settings_local.py
+*.pyc
+*.db

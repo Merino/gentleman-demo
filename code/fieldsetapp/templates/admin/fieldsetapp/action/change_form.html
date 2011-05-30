@@ -1,0 +1,54 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+
+{% block sidebar %}
+<div id="sidebar">
+    <div class="box box-status">
+        <div class="box-content">
+            <div class="box-state">
+                <span class="state late">Verlopen</span>
+            </div>
+        </div>
+    </div>
+    <div class="box box-actions">
+        <div class="box-title">Box A</div>
+        <div class="box-content">
+            <ul>
+                <li><a href="">Action One</a></li>
+                <li><a href="">Action Two</a></li>
+                <li><a href="">Action Three</a></li>
+                <li><a href="">Very Big Action Three, multi row</a></li>
+                <li><a href="#sendall" rel="dialog">Dialog Action</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="box box-historie">
+        <div class="box-title">Historie</div>
+        <div class="box-content">
+            <ul>
+               <li>
+                    <span>Vandaag</span>
+                    <ul>
+                        <li><span class="time">23:00</span> Action One</li>
+                        <li><span class="time">12:00</span> Action Two</li>
+                    </ul>
+               </li>
+               <li>
+                   <span>Gister</span>
+                   <ul>
+                       <li><span class="time">15:00</span> Action Two</li>
+                   </ul>
+               </li>
+               <li>
+                    <span>Vandaag</span>
+                    <ul>
+                        <li><span class="time">23:00</span> Action One</li>
+                        <li><span class="time">12:00</span> Action Two</li>
+                    </ul>
+                </li>
+            <ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
