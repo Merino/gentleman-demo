@@ -34,10 +34,17 @@ class Order(models.Model):
     customer = models.ForeignKey(Customer)
     status  = models.CharField(max_length=20,choices=STATE_CHOICES)
     
-    
-    
     def __unicode__(self):
         return self.number
+        
+    def get_link_field(self):
+
+        spliter = '<br />' 
+        row_email = '<a href="mailto:email@nl.nl">email mij</a>' 
+        row_phone = '<a href="tel:0645020500">tel</a>'
+
+        return u"%s %s %s" % (row_email, spliter, row_phone)
+    get_link_field.allow_tags = True
 
 class Product(models.Model):
     name = models.CharField(max_length=250)

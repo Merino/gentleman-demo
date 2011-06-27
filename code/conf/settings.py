@@ -134,6 +134,7 @@ INSTALLED_APPS = (
     'code.fieldsetapp',
     'code.fieldsapp',
     'code.widgetapp',
+    'code.changelist',
 )
 
 # A sample logging configuration. The only tangible logging

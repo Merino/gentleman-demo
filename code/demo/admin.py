@@ -7,14 +7,16 @@ from gentleman.widgets import SourceWidget, RichTextWidget
 
 class OrderInlineAdmin(admin.TabularInline):
     model = Order
+    readonly_fields = ('get_link_field',)
+    fieldsets = [
+        ('',{'fields': ['number', 'get_link_field', 'status']}),
+    ]
 
 class CustomerAdmin(admin.ModelAdmin):
     
     #save_on_top = True
     list_per_page = 2
     search_fields = ('name',)
-    
-    
     
     fieldsets = (
             ('Naam', {
