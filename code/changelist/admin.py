@@ -3,7 +3,7 @@ from code.changelist.models import BasicChangelist
 
 class BasicChangelistAdmin(admin.ModelAdmin):
     
-    list_display = ('fieldA','fieldB','fieldC','fieldD1','get_link_field','get_multi_row')
+    list_display = ('fieldA','fieldB','fieldC','fieldD1','get_link_field','get_multi_row', 'fieldE')
     
     def get_link_field(self, obj):
         

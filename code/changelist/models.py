@@ -8,3 +8,4 @@ class BasicChangelist(models.Model):
     fieldD1 = models.CharField(max_length=100, blank=True, null=True)
     fieldD2 = models.EmailField(max_length=100, blank=True, null=True)
     fieldD3 = models.TextField(max_length=100, blank=True, null=True)
+    fieldE  = models.BooleanField(default=True)
