@@ -18,6 +18,6 @@ urlpatterns = patterns('',
         (r'^admin/password/reset/(?P<uidb36>[-\w]+)/(?P<token>[-\w]+)/$', 'django.contrib.auth.views.password_reset_confirm'),
         (r'^admin/password/reset/done/$', 'django.contrib.auth.views.password_reset_complete'),
     (r'^admin/', include(admin.site.urls)),
-    
+    url(r'^admin/utils/lookup/related/$', 'gentleman.views.related.related_lookup', name='admin_lookup_related'),
     url(r'^admin_tools/', include('admin_tools.urls')),
 )

@@ -1,9 +1,11 @@
 from django.contrib import admin
-from code.changelist.models import BasicChangelist
+from code.changelist.models import BasicChangelist, BasicForeign
 
 class BasicChangelistAdmin(admin.ModelAdmin):
     
     list_display = ('fieldA','fieldB','fieldC','fieldD1','get_link_field','get_multi_row', 'fieldE')
+    list_filter = ('fieldE','foreign__fieldA', )
+    list_per_page = 1
     
     def get_link_field(self, obj):
         
@@ -26,5 +28,9 @@ class BasicChangelistAdmin(admin.ModelAdmin):
     def get_multi_row(self, obj):
         return "%s <br /> %s" % (obj.fieldD1, obj.fieldD2)
     get_multi_row.allow_tags = True
-    
+
+class BasicForeignAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(BasicForeign, BasicForeignAdmin) 
 admin.site.register(BasicChangelist, BasicChangelistAdmin)

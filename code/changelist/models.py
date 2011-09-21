@@ -9,3 +9,8 @@ class BasicChangelist(models.Model):
     fieldD2 = models.EmailField(max_length=100, blank=True, null=True)
     fieldD3 = models.TextField(max_length=100, blank=True, null=True)
     fieldE  = models.BooleanField(default=True)
+    
+    foreign = models.ForeignKey('BasicForeign') 
+    
+class BasicForeign(models.Model):
+    fieldA = models.CharField(max_length=100)

@@ -1,5 +1,13 @@
 #!/bin/bash -
 
+## Depends List
+
+# curl
+# libxrender-dev
+# libfontconfig-dev
+# buildessentials
+# python-dev
+
 # Text color variables
 txtund=$(tput sgr 0 1)    # Underline
 txtbld=$(tput bold)       # Bold
